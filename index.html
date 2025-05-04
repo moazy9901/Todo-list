@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <!-- Add Tailwind CSS via CDN -->
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container-fluid w-[75%] text-center m-auto">
+        <div class="header my-10">
+            <div class="flex  items-center justify-center py-5">
+                <img class="h-[2.5rem] mx-3" src="img/01f4dd.png" alt="">
+                <h2 class="text-[2rem] ">Todo List</h2>
+            </div>
+            <input id="taskInput" class="form-control w-[100%]   border p-2 transition-all duration-[.5s]" placeholder="Task..." type="text">
+            <div id="alert" class="bg-[#f8d7da]  mt-2 p-3 text-[#991c24] hidden transition-all duration-[.5s] relative" role="alert">
+                the input can't be empty 
+                <span id="closebtn" class="absolute top-0 right-0 pb-6 pr-3 cursor-pointer text-[1.1rem]" >x</span>
+            </div>
+            <br>
+            <button onclick="addTask()" class="text-white bg-blue-400 py-3 px-5 rounded-lg mt-5">Add Task</button>
+        </div>
+            <div class="my-5">
+                <div class="border-b-2 flex py-3 font-bold items-center justify-between">
+                    <p class="w-[25%] overflow-auto max-w-[25%]">index</p>
+                    <p class="w-[25%]">Task</p>
+                    <p class="w-[25%]">Toggle</p>
+                    <p class="w-[25%]">Delete</p>
+                </div>
+            </div>
+            <div id="taskList">
+            </div>
+        
+        
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
